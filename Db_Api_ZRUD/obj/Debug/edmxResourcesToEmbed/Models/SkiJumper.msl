@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="crud_api_dbModelStoreContainer" CdmEntityContainer="crud_api_dbEntities">
+    <EntitySetMapping Name="ski_jumpers">
+      <EntityTypeMapping TypeName="crud_api_dbModel.ski_jumpers">
+        <MappingFragment StoreEntitySet="ski_jumpers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="jump1" ColumnName="jump1" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="construction_point" ColumnName="construction point" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

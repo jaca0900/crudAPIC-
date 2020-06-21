@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="crud_api_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ski_jumpers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="first_name" Type="nchar" MaxLength="10" />
+          <Property Name="last_name" Type="nchar" MaxLength="10" />
+          <Property Name="jump1" Type="real" />
+          <Property Name="age" Type="int" />
+          <Property Name="score" Type="int" />
+          <Property Name="construction point" Type="int" />
+        </EntityType>
+        <EntityContainer Name="crud_api_dbModelStoreContainer">
+          <EntitySet Name="ski_jumpers" EntityType="Self.ski_jumpers" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="crud_api_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ski_jumpers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="first_name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="last_name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="jump1" Type="Single" />
+          <Property Name="age" Type="Int32" />
+          <Property Name="score" Type="Int32" />
+          <Property Name="construction_point" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="crud_api_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ski_jumpers" EntityType="Self.ski_jumpers" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="crud_api_dbModelStoreContainer" CdmEntityContainer="crud_api_dbEntities">
+          <EntitySetMapping Name="ski_jumpers">
+            <EntityTypeMapping TypeName="crud_api_dbModel.ski_jumpers">
+              <MappingFragment StoreEntitySet="ski_jumpers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="jump1" ColumnName="jump1" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="score" ColumnName="score" />
+                <ScalarProperty Name="construction_point" ColumnName="construction point" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

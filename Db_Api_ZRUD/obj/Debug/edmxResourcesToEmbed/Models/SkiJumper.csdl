@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="crud_api_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ski_jumpers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="first_name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="last_name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="jump1" Type="Single" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="score" Type="Int32" />
+    <Property Name="construction_point" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="crud_api_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ski_jumpers" EntityType="Self.ski_jumpers" />
+  </EntityContainer>
+</Schema>
